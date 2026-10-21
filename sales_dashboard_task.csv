@@ -1,0 +1,101 @@
+﻿Order_ID,Date,Product,Category,Quantity,Unit_Price,Region,Payment_Method
+ORD-0001,2025-01-13,Headphones,Electronics,5,1250,Alexandria,Credit Card
+ORD-0002,2025-12-13,Headphones,Electronics,2,2350,Mansoura,Cash
+ORD-0003,2025-02-17,Laptop,Electronics,4,23950,Zagazig,Cash
+ORD-0004,2025-04-12,Watch,Accessories,7,2100,Mansoura,Wallet
+ORD-0005,2025-03-23,Laptop,Electronics,7,26700,Giza,Credit Card
+ORD-0006,2025-06-22,Desk,Furniture,2,3050,Mansoura,Cash
+ORD-0007,2025-06-26,Notebook,Stationery,5,80,Cairo,Bank Transfer
+ORD-0008,2025-03-05,Watch,Accessories,7,1200,Zagazig,Wallet
+ORD-0009,2025-07-05,Water Bottle,Accessories,4,140,Cairo,Credit Card
+ORD-0010,2025-02-10,Chair,Furniture,4,1800,Mansoura,Wallet
+ORD-0011,2025-11-22,Backpack,Accessories,6,650,Giza,Wallet
+ORD-0012,2025-12-10,Desk,Furniture,5,6950,Cairo,Credit Card
+ORD-0013,2025-05-06,Watch,Accessories,3,3650,Mansoura,Wallet
+ORD-0014,2025-04-23,Watch,Accessories,6,1050,Alexandria,Cash
+ORD-0015,2025-07-25,Notebook,Stationery,5,25,Alexandria,Wallet
+ORD-0016,2025-12-02,Desk,Furniture,8,5000,Mansoura,Credit Card
+ORD-0017,2025-03-13,Chair,Furniture,4,2850,Zagazig,Bank Transfer
+ORD-0018,2025-07-24,Water Bottle,Accessories,6,240,Alexandria,Bank Transfer
+ORD-0019,2025-01-25,Headphones,Electronics,2,950,Alexandria,Bank Transfer
+ORD-0020,2025-02-02,Water Bottle,Accessories,7,340,Zagazig,Bank Transfer
+ORD-0021,2025-05-09,Watch,Accessories,1,1400,Zagazig,Wallet
+ORD-0022,2025-02-27,Notebook,Stationery,5,50,Alexandria,Bank Transfer
+ORD-0023,2025-05-15,Laptop,Electronics,3,30950,Cairo,Wallet
+ORD-0024,2025-11-08,Watch,Accessories,4,1650,Giza,Credit Card
+ORD-0025,2025-09-29,Watch,Accessories,1,4500,Giza,Bank Transfer
+ORD-0026,2025-02-27,Laptop,Electronics,6,25850,Alexandria,Cash
+ORD-0027,2025-10-18,Desk,Furniture,2,3000,Mansoura,Cash
+ORD-0028,2025-03-06,Watch,Accessories,3,4900,Mansoura,Credit Card
+ORD-0029,2025-09-28,Chair,Furniture,7,2550,Zagazig,Credit Card
+ORD-0030,2025-07-24,Chair,Furniture,6,4000,Zagazig,Bank Transfer
+ORD-0031,2025-05-07,Headphones,Electronics,4,700,Giza,Cash
+ORD-0032,2025-10-11,Water Bottle,Accessories,4,240,Cairo,Cash
+ORD-0033,2025-04-28,Laptop,Electronics,2,18800,Giza,Cash
+ORD-0034,2025-05-02,Watch,Accessories,5,4950,Mansoura,Credit Card
+ORD-0035,2025-03-09,Watch,Accessories,8,2250,Mansoura,Bank Transfer
+ORD-0036,2025-02-18,Desk,Furniture,2,6700,Mansoura,Wallet
+ORD-0037,2025-07-30,Pen Set,Stationery,8,150,Cairo,Cash
+ORD-0038,2025-07-26,Laptop,Electronics,6,20750,Alexandria,Credit Card
+ORD-0039,2025-10-02,Desk,Furniture,8,3350,Mansoura,Credit Card
+ORD-0040,2025-08-25,Chair,Furniture,4,1650,Mansoura,Cash
+ORD-0041,2025-11-30,Laptop,Electronics,1,20350,Alexandria,Credit Card
+ORD-0042,2025-09-06,Pen Set,Stationery,8,65,Mansoura,Cash
+ORD-0043,2025-07-14,Phone,Electronics,1,16950,Giza,Bank Transfer
+ORD-0044,2025-08-05,Chair,Furniture,8,2150,Alexandria,Wallet
+ORD-0045,2025-01-30,Desk,Furniture,1,4500,Cairo,Cash
+ORD-0046,2025-09-02,Water Bottle,Accessories,3,135,Zagazig,Cash
+ORD-0047,2025-02-05,Phone,Electronics,2,13000,Mansoura,Cash
+ORD-0048,2025-05-07,Water Bottle,Accessories,1,150,Mansoura,Wallet
+ORD-0049,2025-04-15,Chair,Furniture,6,2700,Giza,Bank Transfer
+ORD-0050,2025-12-10,Phone,Electronics,5,18700,Giza,Cash
+ORD-0051,2025-08-23,Laptop,Electronics,2,19850,Zagazig,Credit Card
+ORD-0052,2025-05-16,Watch,Accessories,3,2900,Cairo,Credit Card
+ORD-0053,2025-05-26,Notebook,Stationery,3,55,Zagazig,Wallet
+ORD-0054,2025-12-01,Water Bottle,Accessories,1,450,Giza,Cash
+ORD-0055,2025-05-16,Phone,Electronics,2,9700,Zagazig,Credit Card
+ORD-0056,2025-05-25,Chair,Furniture,4,3350,Alexandria,Wallet
+ORD-0057,2025-09-08,Watch,Accessories,5,1000,Cairo,Bank Transfer
+ORD-0058,2025-01-23,Chair,Furniture,1,3300,Alexandria,Wallet
+ORD-0059,2025-08-15,Phone,Electronics,7,21350,Cairo,Cash
+ORD-0060,2025-12-20,Headphones,Electronics,3,2200,Cairo,Wallet
+ORD-0061,2025-10-10,Water Bottle,Accessories,3,375,Alexandria,Cash
+ORD-0062,2025-07-06,Chair,Furniture,1,3450,Alexandria,Credit Card
+ORD-0063,2025-07-01,Headphones,Electronics,7,2450,Alexandria,Credit Card
+ORD-0064,2025-04-01,Phone,Electronics,7,7600,Alexandria,Wallet
+ORD-0065,2025-12-09,Pen Set,Stationery,4,75,Alexandria,Cash
+ORD-0066,2025-01-20,Pen Set,Stationery,8,70,Alexandria,Bank Transfer
+ORD-0067,2025-06-06,Notebook,Stationery,4,35,Cairo,Credit Card
+ORD-0068,2025-06-18,Pen Set,Stationery,5,45,Giza,Wallet
+ORD-0069,2025-07-24,Watch,Accessories,6,850,Cairo,Wallet
+ORD-0070,2025-10-25,Phone,Electronics,5,7950,Cairo,Bank Transfer
+ORD-0071,2025-06-10,Notebook,Stationery,7,65,Zagazig,Cash
+ORD-0072,2025-10-23,Pen Set,Stationery,4,75,Cairo,Bank Transfer
+ORD-0073,2025-09-24,Laptop,Electronics,4,27300,Mansoura,Cash
+ORD-0074,2025-11-16,Notebook,Stationery,6,70,Cairo,Wallet
+ORD-0075,2025-06-08,Watch,Accessories,7,2750,Mansoura,Wallet
+ORD-0076,2025-03-07,Watch,Accessories,4,3350,Mansoura,Credit Card
+ORD-0077,2025-10-19,Water Bottle,Accessories,5,355,Zagazig,Cash
+ORD-0078,2025-05-27,Chair,Furniture,4,3950,Zagazig,Wallet
+ORD-0079,2025-08-15,Backpack,Accessories,8,1450,Alexandria,Bank Transfer
+ORD-0080,2025-12-04,Phone,Electronics,2,14250,Zagazig,Wallet
+ORD-0081,2025-05-01,Headphones,Electronics,5,1200,Alexandria,Credit Card
+ORD-0082,2025-01-24,Laptop,Electronics,4,30150,Zagazig,Cash
+ORD-0083,2025-08-01,Backpack,Accessories,4,1500,Mansoura,Bank Transfer
+ORD-0084,2025-05-05,Pen Set,Stationery,3,135,Cairo,Cash
+ORD-0085,2025-04-23,Pen Set,Stationery,3,145,Zagazig,Bank Transfer
+ORD-0086,2025-10-13,Laptop,Electronics,4,21100,Mansoura,Credit Card
+ORD-0087,2025-12-08,Backpack,Accessories,6,1600,Mansoura,Bank Transfer
+ORD-0088,2025-08-17,Watch,Accessories,3,3700,Mansoura,Wallet
+ORD-0089,2025-11-23,Desk,Furniture,5,5800,Mansoura,Credit Card
+ORD-0090,2025-08-14,Chair,Furniture,2,3000,Alexandria,Wallet
+ORD-0091,2025-06-13,Notebook,Stationery,2,30,Alexandria,Credit Card
+ORD-0092,2025-12-22,Pen Set,Stationery,3,145,Alexandria,Cash
+ORD-0093,2025-07-28,Pen Set,Stationery,6,120,Mansoura,Bank Transfer
+ORD-0094,2025-04-16,Laptop,Electronics,7,27950,Zagazig,Cash
+ORD-0095,2025-07-14,Water Bottle,Accessories,8,100,Giza,Wallet
+ORD-0096,2025-08-03,Pen Set,Stationery,4,110,Alexandria,Wallet
+ORD-0097,2025-09-06,Pen Set,Stationery,1,95,Giza,Bank Transfer
+ORD-0098,2025-08-28,Phone,Electronics,3,20650,Cairo,Bank Transfer
+ORD-0099,2025-10-16,Water Bottle,Accessories,1,150,Mansoura,Credit Card
+ORD-0100,2025-04-04,Backpack,Accessories,1,800,Mansoura,Wallet

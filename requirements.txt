@@ -1,0 +1,6 @@
+pandas>=2.0
+plotly>=5.18
+dash>=3.0
+
+# Optional — only needed to regenerate the screenshots
+# playwright>=1.40

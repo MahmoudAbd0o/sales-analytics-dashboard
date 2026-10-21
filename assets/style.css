@@ -1,0 +1,669 @@
+/* ------------------------------------------------------------------
+   Sales Analytics Dashboard — stylesheet
+   ------------------------------------------------------------------ */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --navy: #0f172a;
+  --slate: #475569;
+  --muted: #94a3b8;
+  --border: #e8edf5;
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  color: var(--navy);
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 1560px;
+  margin: 0 auto;
+  padding: 26px 30px 18px;
+}
+
+/* ------------------------------- Header ------------------------------- */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: linear-gradient(120deg, #0f172a 0%, #1e293b 55%, #312e81 100%);
+  border-radius: 20px;
+  padding: 26px 32px;
+  color: #fff;
+  box-shadow: 0 18px 40px -24px rgba(15, 23, 42, 0.7);
+  position: relative;
+  overflow: hidden;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  right: -80px;
+  top: -160px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.45), transparent 65%);
+  pointer-events: none;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+}
+
+.header-sub {
+  margin: 7px 0 0;
+  font-size: 13px;
+  color: #a5b4fc;
+  letter-spacing: 0.2px;
+}
+
+.header-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  padding: 10px 18px;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+.meta-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.meta-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+/* ------------------------------ Filters ------------------------------ */
+.filters {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+  flex-wrap: wrap;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 22px;
+  margin-top: 18px;
+  box-shadow: 0 10px 26px -22px rgba(15, 23, 42, 0.5);
+}
+
+.filter-field {
+  flex: 1 1 230px;
+  min-width: 200px;
+}
+
+.date-field {
+  flex: 1 1 320px;
+}
+
+.filter-label {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  color: var(--muted);
+  margin-bottom: 7px;
+}
+
+.reset-btn {
+  border: 1px solid var(--border);
+  background: #f8fafc;
+  color: var(--slate);
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  height: 40px;
+}
+
+.reset-btn:hover {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+
+/* ------------------- Dash 4 dropdown (Radix based) ------------------- */
+.filter-field .dash-dropdown {
+  width: 100%;
+  min-height: 42px;
+  height: 42px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #f8fafc;
+  padding: 0 10px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: #334155;
+  cursor: pointer;
+  transition: border-color 0.16s ease, background 0.16s ease;
+}
+
+.filter-field .dash-dropdown:hover,
+.filter-field .dash-dropdown[data-state="open"] {
+  border-color: #a5b4fc;
+  background: #fff;
+}
+
+.filter-field .dash-dropdown-grid-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+.dash-dropdown-value {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #334155;
+  font-size: 12.5px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.dash-dropdown-value-item {
+  display: inline;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+  border-radius: 0;
+}
+
+.dash-dropdown-value-count {
+  color: var(--muted);
+  background: #eef2ff;
+  border-radius: 6px;
+  padding: 2px 7px;
+  font-size: 10.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.dash-dropdown-trigger-icon {
+  margin-left: auto;
+  color: var(--muted);
+  flex: 0 0 auto;
+}
+
+/* popup */
+.dash-dropdown-content {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 22px 44px -22px rgba(15, 23, 42, 0.45);
+  padding: 8px;
+  z-index: 3000;
+  margin-top: 6px;
+}
+
+.dash-dropdown-search-container {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #eef2f7;
+}
+
+.dash-dropdown-search {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-family: inherit;
+  font-size: 12.5px;
+  color: #334155;
+  width: 100%;
+}
+
+.dash-dropdown-actions {
+  padding: 6px 4px 2px;
+}
+
+.dash-dropdown-action-button {
+  border: none;
+  background: #eef2ff;
+  color: #4338ca;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dash-dropdown-action-button:hover {
+  background: #e0e7ff;
+}
+
+.dash-options-list {
+  max-height: 230px;
+  overflow-y: auto;
+  padding: 4px;
+}
+
+.dash-options-list-option {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 9px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  color: #334155;
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+
+.dash-options-list-option:hover {
+  background: #f4f6fb;
+}
+
+.dash-options-list-option.selected {
+  background: #eef2ff;
+  color: #4338ca;
+  font-weight: 600;
+}
+
+.dash-options-list-option-checkbox {
+  accent-color: #4f46e5;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+}
+
+/* ------------------- Dash 4 date range picker ----------------------- */
+.dash-datepicker-input-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 42px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #f8fafc;
+  padding: 0 12px;
+  transition: border-color 0.16s ease, background 0.16s ease;
+}
+
+.dash-datepicker-input-wrapper:hover,
+.dash-datepicker-input-wrapper[data-state="open"] {
+  border-color: #a5b4fc;
+  background: #fff;
+}
+
+.dash-datepicker-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #334155;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.dash-datepicker-start-date {
+  width: 92px;
+  text-align: right;
+}
+
+.dash-datepicker-end-date {
+  width: 92px;
+  text-align: left;
+}
+
+.dash-datepicker-range-arrow {
+  color: var(--muted);
+  flex: 0 0 auto;
+}
+
+.dash-datepicker-content {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 24px 48px -24px rgba(15, 23, 42, 0.45);
+  padding: 12px;
+  z-index: 3000;
+}
+
+.dash-datepicker-calendar-wrapper {
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.dash-datepicker-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 2px 8px;
+  color: var(--navy);
+}
+
+.dash-datepicker-controls .dash-dropdown {
+  border: none;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  padding: 4px 6px;
+  height: auto;
+}
+
+.dash-datepicker-month-nav {
+  border: 1px solid var(--border);
+  background: #f8fafc;
+  border-radius: 7px;
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--slate);
+  cursor: pointer;
+}
+
+.dash-datepicker-month-nav:hover:not(:disabled) {
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+.dash-datepicker-calendar-date-inside {
+  border-radius: 8px;
+  font-size: 11.5px;
+  color: #334155;
+  cursor: pointer;
+}
+
+.dash-datepicker-calendar-date-inside:hover {
+  background: #f1f5f9;
+}
+
+.dash-datepicker-calendar-date-highlighted {
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+.dash-datepicker-calendar-date-selected {
+  background: #4f46e5 !important;
+  color: #fff !important;
+  font-weight: 700;
+}
+
+.dash-datepicker-calendar-date-disabled {
+  color: #cbd5e1;
+  cursor: not-allowed;
+}
+
+.dash-input-stepper {
+  border: 1px solid var(--border);
+  background: #f8fafc;
+  border-radius: 6px;
+  color: var(--slate);
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+}
+
+/* ----------------------------- KPI cards ----------------------------- */
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.kpi-card {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 22px 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px -26px rgba(15, 23, 42, 0.6);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.kpi-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: var(--accent, #4f46e5);
+}
+
+.kpi-card::after {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  right: -40px;
+  bottom: -55px;
+  border-radius: 50%;
+  background: var(--accent, #4f46e5);
+  opacity: 0.07;
+}
+
+.kpi-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px -26px rgba(15, 23, 42, 0.7);
+}
+
+.kpi-title {
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+
+.kpi-value {
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  color: var(--navy);
+  margin: 8px 0 5px;
+  line-height: 1.1;
+}
+
+.kpi-sub {
+  font-size: 12px;
+  color: var(--slate);
+}
+
+/* ------------------------------- Grid -------------------------------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.span-4 {
+  grid-column: span 4;
+}
+
+.span-5 {
+  grid-column: span 5;
+}
+
+.span-7 {
+  grid-column: span 7;
+}
+
+.span-8 {
+  grid-column: span 8;
+}
+
+.chart-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 18px 8px;
+  box-shadow: 0 12px 28px -28px rgba(15, 23, 42, 0.65);
+  min-width: 0;
+}
+
+.chart-head {
+  padding: 0 4px 4px;
+}
+
+.chart-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: -0.2px;
+}
+
+.chart-sub {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+/* Plotly */
+.js-plotly-plot .plotly .modebar {
+  display: none !important;
+}
+
+/* ---------------------------- Insights ------------------------------- */
+.insights-card {
+  display: flex;
+  flex-direction: column;
+  border-top: 3px solid #4f46e5;
+}
+
+.insights {
+  list-style: none;
+  counter-reset: insight;
+  margin: 10px 4px 10px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.insight-item {
+  counter-increment: insight;
+  position: relative;
+  display: flex;
+  gap: 12px;
+  background: #f8fafc;
+  border: 1px solid #eef2f7;
+  border-radius: 11px;
+  padding: 11px 14px 11px 12px;
+}
+
+.insight-item::before {
+  content: counter(insight);
+  flex: 0 0 auto;
+  width: 21px;
+  height: 21px;
+  border-radius: 7px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.insight-text {
+  font-size: 12.4px;
+  line-height: 1.55;
+  color: #334155;
+}
+
+.insight-text b {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+/* ------------------------------- Footer ------------------------------ */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 20px 0 6px;
+  padding: 0 4px;
+  font-size: 11.5px;
+  color: var(--muted);
+}
+
+.footer-note {
+  font-weight: 600;
+  color: var(--slate);
+}
+
+/* ---------------------------- Responsive ----------------------------- */
+@media (max-width: 1240px) {
+  .kpi-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .span-4,
+  .span-5,
+  .span-7,
+  .span-8 {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding: 14px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px;
+  }
+
+  .header-meta {
+    align-items: flex-start;
+  }
+
+  .kpi-row {
+    grid-template-columns: 1fr;
+  }
+}
